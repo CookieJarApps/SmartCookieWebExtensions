@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Extension Store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  </head>
+  <body>
+   
+    <script src="script.js"></script>
+   <!-- As a link -->
+<nav>
+  <div class="nav-wrapper cookie2">
+     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a class="brand-logo" href="index.html" style="padding-left: 1vw;">Extensions Store</a>
+   <!--<img src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180" width="32" height="32">-->
+
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="index.html">Extensions</a>
+      </li>
+      <li>
+        <a href="create.html">Create</a>
+      </li>
+      <li>
+        <a  href="//cookiejarapps.com/extensions/upload.php">Upload</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" href="//cookiejarapps.com/extensions/convert.php">Convert</a>
+      </li>-->
+    </ul>
+  </div>
+  </div>
+</nav>
+<ul id="slide-out" class="sidenav">
+  <center>
+    <li><div class="user-view">
+      <a href="#user"><img class="circle" src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180"></a>
+      <a href="#name"><span class="black-text name">Extensions Store</span></a>
+    </div></li></center>
+        <li><div class="divider"></div></li>
+
+    <li><a href="index.html"><i class="material-icons">extension</i>Extensions</a></li>
+    <li><a href="#!"><i class="material-icons">create</i>Create</a></li>
+    <li><a href="#!"><i class="material-icons">cloud_upload</i>Upload</a></li>
+  
+  </ul>
+<div class="container">
+
+<br>
+
+    <h2>Create an Extension</h2>
+    <p class="flow-text">SmartCookieWeb extensions are made up of a "script.js" file and a "manifest.json" file. The "script.js" file is loaded whenever a website is loaded. At the moment, extensions can only modify websites, but soon they will be able to add icons to the navigation bar in Smart Cookie.
+      <br>
+      To start the extension, create a folder and inside the folder create the "script.js" and "manifest.js" files, as well as an optional image file for the icon of your extension (should be at least 512x512). Inside the manifest file, add the following code and fill in the appropriate information:</p>
+      <blockquote><pre>
+{
+  "name": "Google Dark Theme",
+  "icon-src": "image.png"
+  "author": "CookieJarApps",
+  "version": "1.0.0",
+  "description": "A dark theme for Google."
+}
+
+        </pre></blockquote>
+        <p class="flow-text">
+          Then add your extension name inside a multiline comment to the JavaScript file. Please note that you should avoid using these comments in your extension as it may cause unpredictable results. Then, in the JavaScript file, use an if statement to check whether the user is on the website your extension modifies (better method coming soon) and then run the JavaScript your extension needs. Your file must end with "/*End" + your extension name + "*/":</p>
+          <blockquote> <pre>
+            /*Google Dark Theme*/
+if(location.hostname.includes("google.com")){
+  document.body.style.backgroundColor = "#000000"; 
+  var search = document.getElementsByClassName("SDkEP");
+  search[0].setAttribute("style", "background-color: #333333;"); 
+}
+//End Google Dark Theme\\
+          </pre></blockquote>
+          <p class="flow-text">Then, put your extension in a .zip file and navigate to the upload page.</p>
+          <h2>Hosting Your Extension</h2>
+          <p class="flow-text">You can either upload the extension to the official extension store (recommended) or host it yourself. If you host the extension yourself, a warning will appear in Smart Cookie before the user installs it. If you still want to host the extension yourself, add the script.js file onto your webserver and to trigger the installation prompt in Smart Cookie, link the file with "?install_extension=true" on the end, for example "script.js?install_extension=true". Then, you MUST add an uninstall button which redirects to the script with "?install_extension=false" (if you don't do this your extension will be difficult to uninstall for the user and your extension may be blacklisted in Smart Cookie). Also make sure to minify the code because line breaks are not removed when the extension is loaded, so it may not run properly.</p>
+          </div>
+  </body>
+  
+   <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+   <script>
+      document.addEventListener('DOMContentLoaded', function() {
+   var elems = document.querySelectorAll('.fixed-action-btn');
+   var instances = M.FloatingActionButton.init(elems, {
+     direction: 'left',
+     hoverEnabled: false
+   });
+ });
+ $(document).ready(function(){
+   $('.sidenav').sidenav();
+ });
+ </script>
+
+ <style>
+ .cookie1 {
+ background-color: #C88C36 !important;
+}
+
+ .cookie2 {
+ background-color: #8E4F00 !important;
+}
+.card .card-action {
+ border-top: 1px solid rgba(255,255,255,0.5);
+}
+</style>
+</html>

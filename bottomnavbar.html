@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Extension Store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+  </head>
+  <body>
+   
+    <script src="script.js"></script>
+   <!-- As a link -->
+<nav>
+  <div class="nav-wrapper cookie2">
+     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a class="brand-logo" href="index.html" style="padding-left: 1vw;">Extensions Store</a>
+   <!--<img src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180" width="32" height="32">-->
+
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="#">Extensions</a>
+      </li>
+      <li>
+        <a href="create.html">Create</a>
+      </li>
+      <li>
+        <a  href="//cookiejarapps.com/extensions/upload.php">Upload</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" href="//cookiejarapps.com/extensions/convert.php">Convert</a>
+      </li>-->
+    </ul>
+  </div>
+  </div>
+</nav>
+<ul id="slide-out" class="sidenav">
+  <center>
+    <li><div class="user-view">
+      <a href="#user"><img class="circle" src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180"></a>
+      <a href="#name"><span class="black-text name">Extensions Store</span></a>
+    </div></li></center>
+        <li><div class="divider"></div></li>
+
+    <li><a href="index.html"><i class="material-icons">extension</i>Extensions</a></li>
+    <li><a href="#!"><i class="material-icons">create</i>Create</a></li>
+    <li><a href="#!"><i class="material-icons">cloud_upload</i>Upload</a></li>
+  
+  </ul>
+  <br>
+  <div class="container">
+<h2>Bottom Navbar</h2>
+      <h5 class="text-muted">by CookieJarApps</h5>
+    <p>Adds a second navigation bar at the bottom of the screen.</p>
+   <br>
+<a href="bottomnavbar.js?install_extension=true" class="waves-effect waves-light btn-small cookie1"><i class="material-icons left">save_alt</i>Install</a>
+<a href="bottomnavbar.js?install_extension=false" class="waves-effect waves-light btn-small cookie1"><i class="material-icons left">delete</i>Uninstall</a>
+
+<script>
+new ClipboardJS('.btn');
+</script>
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large cookie1">
+    <i class="large material-icons">mode_edit</i>
+  </a>
+  <ul>
+    <li><a href="bottomnavbar.js?install_extension=false" class="btn-floating red"><i class="material-icons">delete</i></a></li>
+    <li><a href="bottomnavbar.js?install_extension=true" class="btn-floating green"><i class="material-icons">save_alt</i></a></li>
+  </ul>
+</div>
+
+  </body>
+   <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <script>
+       document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems, {
+      direction: 'left',
+      hoverEnabled: false
+    });
+  });
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+  </script>
+
+  <style>
+  .cookie1 {
+  background-color: #C88C36 !important;
+}
+
+  .cookie2 {
+  background-color: #8E4F00 !important;
+}
+.card .card-action {
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+</style>
+</div>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Extension Store</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style type="text/css">
+
+	.modal-confirm {		
+		color: #636363;
+		width: 325px;
+	}
+	.modal-confirm h4 {
+		text-align: center;
+		font-size: 26px;
+		margin: 30px 0 -15px;
+	}
+	.modal-confirm .form-control, .modal-confirm .btn {
+		min-height: 40px;
+		border-radius: 3px; 
+	}
+	.modal-confirm .close {
+        position: absolute;
+		top: -5px;
+		right: -5px;
+	}	
+	.modal-confirm .icon-box {
+		color: #fff;		
+		position: absolute;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		top: -70px;
+		width: 95px;
+		height: 95px;
+		border-radius: 50%;
+		z-index: 9;
+		background: #FFCC00;
+		padding: 15px;
+		text-align: center;
+		box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+	}
+	.modal-confirm .icon-box i {
+		font-size: 58px;
+		position: relative;
+		top: 3px;
+	}
+	.modal-confirm.modal-dialog {
+		margin-top: 80px;
+	}
+
+</style>
+</head>
+<body>
+<div class="text-center">
+	<!-- Button HTML (to Trigger Modal) -->
+
+
+<!-- Modal HTML -->
+<div id="myModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-confirm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<div class="icon-box">
+					<i class="material-icons"><i class="material-icons">warning</i></i>
+				</div>				
+				<h4 class="modal-title" id="notSupported">Language Not Supported!</h4>	
+			</div>
+			<div class="modal-body">
+				<p class="text-center" id="notSupportedText">Unfortunately, the extensions store is not available in your language yet. Use the button below to continue in English anyway.</p>
+			</div>
+			<div class="modal-footer">
+				<button onclick="$('#myModal').modal('hide')" class="btn btn-warning" style="color: white;" id="notSupportedButton">-></button>
+			</div>
+		</div>
+	</div>
+</div>     
+ 
+    <script src="script.js"></script>
+   <!-- As a link -->
+<nav>
+  <div class="nav-wrapper cookie2">
+     <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+  <a class="brand-logo" href="index.html" style="padding-left: 1vw;">Extensions Store</a>
+   <!--<img src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180" width="32" height="32">-->
+
+<ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li>
+        <a href="#">Extensions</a>
+      </li>
+      <li>
+        <a href="create.html">Create</a>
+      </li>
+      <li>
+        <a  href="//cookiejarapps.com/extensions/upload.php">Upload</a>
+      </li>
+      <!--<li class="nav-item">
+        <a class="nav-link" href="//cookiejarapps.com/extensions/convert.php">Convert</a>
+      </li>-->
+    </ul>
+  </div>
+  </div>
+</nav>
+<ul id="slide-out" class="sidenav">
+  <center>
+    <li><div class="user-view">
+      <a href="#user"><img class="circle" src="https://lh3.googleusercontent.com/kfDBQi0smpMPgpWlXMZ2ow9M6uURgIGhY_sZSkk1lbANAU1PCfEVgwlHwaPVypIFYzxJ=s180"></a>
+      <a href="#name"><span class="black-text name">Extensions Store</span></a>
+    </div></li></center>
+        <li><div class="divider"></div></li>
+
+    <li><a href="index.html"><i class="material-icons">extension</i>Extensions</a></li>
+    <li><a href="create.html"><i class="material-icons">create</i>Create</a></li>
+    <li><a href="upload.php"><i class="material-icons">cloud_upload</i>Upload</a></li>
+  
+  </ul>
+ 
+<div class="container-fluid">
+<br>
+<div class="row">
+    <div class="col s12 m4">
+  <div class="card cookie1">
+    <div class="card-content white-text">
+      <span class="card-title">Bottom Navbar</span>
+      <span class="card-subtitle">by CookieJarApps</span>
+      <p>Adds a second navigation bar at the bottom of the screen.</p>
+    </div>
+    <div class="card-action">
+<a href="bottomnavbar.html" class="">More Info</a>
+<a href="bottomnavbar.js?install_extension=true" class="">Install</a>
+
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+  </body>
+  <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+
+<style>
+  .cookie1 {
+  background-color: #C88C36 !important;
+}
+
+  .cookie2 {
+  background-color: #8E4F00 !important;
+}
+.card .card-action {
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+</style>
+            
+</html>
